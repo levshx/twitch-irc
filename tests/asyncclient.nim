@@ -1,4 +1,4 @@
-import irc, asyncdispatch, strutils
+import twitch-irc, asyncdispatch, strutils
 
 proc onIrcEvent(client: AsyncIrc, event: IrcEvent) {.async.} =
   case event.typ

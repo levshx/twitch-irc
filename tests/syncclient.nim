@@ -1,4 +1,4 @@
-import irc, strutils
+import twitch-irc, strutils
 var client = newIrc("irc.freenode.net", nick="TestBot1234",
                  joinChans = @["#nim-offtopic"])
 client.connect()
