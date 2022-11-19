@@ -6,7 +6,6 @@ Twitch is a trademark or registered trademark of Twitch Interactive, Inc. in the
 
 - Supports IRCv3 tags.
 - Supports all Twitch events.
-- Supports all Twitch commands.
 
 ## Install twitch-irc
 
