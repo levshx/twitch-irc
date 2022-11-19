@@ -2,7 +2,7 @@
 
 version = "0.0.1"
 author = "Dominik Picheta & levshx"
-description = "IRC client module (with twitch )"
+description = "IRC client module (with twitch)"
 license = "MIT"
 srcDir = "src"
 
