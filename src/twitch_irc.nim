@@ -70,19 +70,30 @@ type
   IrcMType* = enum
     MUnknown,
     MNumeric,
-    MPrivMsg,
-    MJoin,
-    MPart,
+    MPrivMsg, #T
+    MJoin, #T
+    MPart, #T
     MMode,
     MTopic,
     MInvite,
     MKick,
     MQuit,
-    MNick,
-    MNotice,
-    MPing,
-    MPong,
-    MError
+    MNick, #T
+    MNotice, #T
+    MPing, #T
+    MPong, #T
+    MError,
+    # Twitch-specific IRC messages
+    MClearChat,
+    MClearMsg,
+    MGlobalUserState,
+    MHostTarget,
+    MReconnect,
+    MRoomState,
+    MUserNotice,
+    MUserState,
+    MWhisper
+
 
   IrcEventType* = enum
     EvMsg, EvConnected, EvDisconnected, EvTimeout
@@ -279,8 +290,18 @@ proc parseMessage(msg: string): IrcEvent =
     of "NICK": result.cmd = MNick
     of "NOTICE": result.cmd = MNotice
     of "ERROR": result.cmd = MError
+    # Twitch-specific IRC messages
+    of "CLEARCHAT": result.cmd = MClearChat
+    of "CLEARMSG": result.cmd = MClearMsg
+    of "GLOBALUSERSTATE": result.cmd = MGlobalUserState
+    of "HOSTTARGET": result.cmd = MHostTarget
+    of "RECONNECT": result.cmd = MReconnect
+    of "ROOMSTATE": result.cmd = MRoomState
+    of "USERNOTICE": result.cmd = MUserNotice
+    of "USERSTATE": result.cmd = MUserState
+    of "WHISPER": result.cmd = MWhisper
     else: result.cmd = MUnknown
-
+  
   # Don't skip space here. It is skipped in the following While loop.
 
   # Params
