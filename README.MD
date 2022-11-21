@@ -6,7 +6,7 @@
 Twitch is a trademark or registered trademark of Twitch Interactive, Inc. in the U.S. and/or other countries. "Twitch-IRC" is not operated by, sponsored by, or affiliated with Twitch Interactive, Inc. in any way.
 
 - Supports IRCv3 tags.
-- Supports all Twitch events.
+- Supports all Twitch-specific IRC Commands (Recive).
 
 ## Install twitch-irc
 
