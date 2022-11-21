@@ -14,6 +14,8 @@ This package implements an IRC client.
 
 I will approve any pull request if you think it is necessary. It's just a fork https://github.com/dom96/irc with Twitch-specific IRC Commands.
 
+An example of a bot based on this twitch-irc client can be viewed here: https://github.com/levshx/twitch-bot
+
 To install using [Nimble](https://github.com/nim-lang/nimble) run the following:
 
 ```
